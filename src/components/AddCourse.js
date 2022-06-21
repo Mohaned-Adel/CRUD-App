@@ -1,24 +1,18 @@
-const AddCourse = ({ setInputCourse, setCourses, courses, inputCourse }) => {
-  const changeCourseHandler = (e) => {
-    setInputCourse(e.target.value);
-  };
+const AddCourse = ({ updateCourse,addCourse,current }) => {
+  
 
-  const submitCourseHandler = (e) => {
-    e.preventDefault();
-    setCourses([...courses, inputCourse]);
-    setInputCourse("")
-  };
+  
 
   return (
     <div>
-      <form onSubmit={submitCourseHandler}>
+      <form onSubmit={addCourse}>
         <input
-          onChange={changeCourseHandler}
+          onChange={updateCourse}
           type="text"
           placeholder="Enter your Course"
-          value={inputCourse}
+          value={current}
         />
-        <input onClick={submitCourseHandler} type="submit" value="Add" />
+        <button onClick={addCourse} > Add</button>
       </form>
     </div>
   );
