@@ -1,8 +1,5 @@
 const AddCourse = ({ updateCourse,addCourse,current }) => {
   
-
-  
-
   return (
     <div>
       <form onSubmit={addCourse}>
